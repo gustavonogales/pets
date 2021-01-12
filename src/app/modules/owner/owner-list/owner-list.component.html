@@ -1,0 +1,41 @@
+<po-page-list
+  p-title="Donos"
+  [p-actions]="actions"
+>
+
+  <po-list-view
+    class="po-visible-md"
+    p-property-title="name"
+    [p-items]="owners"
+    [p-actions]="tableActions"
+  >
+    <ng-template p-list-view-content-template let-item>
+      <div class="po-row">
+        <po-info class="po-sm-6" p-label="Email" [p-value]="item.email"></po-info>
+        <po-info class="po-sm-6" p-label="Telefone" [p-value]="item.phone"></po-info>
+      </div>
+      <div class="po-row">
+        <po-info class="po-sm-6" p-label="Endereço" [p-value]="item.address"></po-info>
+        <po-info class="po-sm-6" p-label="Data Nascimento" [p-value]="item.birthday"></po-info>
+      </div>
+    </ng-template>
+  </po-list-view>
+
+  <po-table
+    class="po-hidden-md po-hidden-sm"
+    p-selectable
+    p-sort="true"
+    [p-loading]="loading"
+    [p-actions]="tableActions"
+    [p-items]="owners"
+    [p-columns]="tableColumns"
+  ></po-table>
+
+</po-page-list>
+
+<po-modal
+  #confirmToRemove
+  p-click-out="true"
+  p-title="Remover Dono">
+{{ modalText }}
+</po-modal>

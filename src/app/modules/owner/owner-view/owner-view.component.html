@@ -1,0 +1,43 @@
+<po-page-detail
+  p-title="Detalhes do Dono"
+  (p-back)="back()"
+  (p-remove)="remove()"
+  (p-edit)="edit()"
+>
+
+<div class="po-row">
+  <po-info class="po-md-5"
+    p-label="Nome"
+    [p-value]="owner.name">
+  </po-info>
+
+  <po-info class="po-md-5"
+    p-label="E-mail"
+    [p-value]="owner.email">
+  </po-info>
+
+  <po-info class="po-md-3"
+    p-label="Data de Nascimento"
+    [p-value]="owner.birthday | date:'dd/MM/yyyy'">
+  </po-info>
+
+  <po-info class="po-md-6"
+    p-label="Endereço completo"
+    [p-value]="owner.address">
+  </po-info>
+
+
+  <po-info class="po-md-3"
+    p-label="Telefone"
+    [p-value]="owner.phone">
+  </po-info>
+</div>
+
+</po-page-detail>
+
+<po-modal
+  #confirmToRemove
+  p-click-out="true"
+  p-title="Remover Dono">
+{{ modalText }}
+</po-modal>

@@ -1,0 +1,40 @@
+<po-page-list
+  p-title="Pets"
+  [p-actions]="actions"
+>
+
+  <po-list-view
+    class="po-visible-md"
+    p-property-title="nickName"
+    [p-items]="pets"
+    [p-actions]="tableActions"
+  >
+    <ng-template p-list-view-content-template let-item>
+      <div class="po-row">
+        <po-info class="po-sm-6" p-label="Nome" [p-value]="item.name"></po-info>
+      </div>
+      <div class="po-row">
+        <po-info class="po-sm-6" p-label="Raça" [p-value]="item.breed"></po-info>
+        <po-info class="po-sm-6" p-label="Espécie" [p-value]="item.species"></po-info>
+      </div>
+    </ng-template>
+  </po-list-view>
+
+  <po-table
+    class="po-hidden-md po-hidden-sm"
+    p-selectable
+    p-sort="true"
+    [p-loading]="loading"
+    [p-actions]="tableActions"
+    [p-items]="pets"
+    [p-columns]="tableColumns"
+  ></po-table>
+
+</po-page-list>
+
+<po-modal
+  #confirmToRemove
+  p-click-out="true"
+  p-title="Remover Pet">
+{{ modalText }}
+</po-modal>

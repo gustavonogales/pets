@@ -1,0 +1,56 @@
+<po-page-detail>
+  <po-container p-no-border="true" p-no-shadow="true">
+    <h1 class="po-font-title">{{formTitle}}</h1>
+    <form [formGroup]="form">
+      <po-input class="po-md-5"
+        name="name"
+        formControlName="name"
+        p-required
+        p-label="Nome completo"
+      ></po-input>
+
+      <po-email class="po-md-5"
+        name="email"
+        formControlName="email"
+        p-required
+        p-label="E-mail"
+        [p-disabled]="isEditAction"
+      ></po-email>
+      <po-input class="po-md-5"
+        name="address"
+        formControlName="address"
+        p-required
+        p-label="Endereço completo"
+      ></po-input>
+
+      <po-input class="po-md-3"
+        name="phone"
+        formControlName="phone"
+        p-required
+        p-mask="(99) 99999-9999"
+        p-label="Telefone"
+      ></po-input>
+
+      <po-decimal
+        name="exemploDecimal"
+        p-label="Exemplo Decimal"
+        formControlName="exemploDecimal"
+      ></po-decimal>
+
+      <po-input class="po-md-3"
+        name="birthday"
+        p-mask="99/99/9999"
+        formControlName="birthday"
+        p-label="Data de Nascimento">
+      </po-input>
+
+      <div class="po-row">
+        <po-button
+         p-label="Salvar"
+         (p-click)="save()"
+        ></po-button>
+      </div>
+    </form>
+
+  </po-container>
+</po-page-detail>
