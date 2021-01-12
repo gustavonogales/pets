@@ -1,0 +1,119 @@
+{
+  "configVersion": 1,
+  "timestamp": 1610479844109,
+  "index": "https://gustavonogales.github.io/pets/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://gustavonogales.github.io/pets/6-es2015.5bb993d2205ff63fac93.js",
+        "https://gustavonogales.github.io/pets/6-es5.5bb993d2205ff63fac93.js",
+        "https://gustavonogales.github.io/pets/7-es2015.c1f56092d116aa29b302.js",
+        "https://gustavonogales.github.io/pets/7-es5.c1f56092d116aa29b302.js",
+        "https://gustavonogales.github.io/pets/common-es2015.a1729d9d9587498e5ced.js",
+        "https://gustavonogales.github.io/pets/common-es5.a1729d9d9587498e5ced.js",
+        "https://gustavonogales.github.io/pets/favicon.ico",
+        "https://gustavonogales.github.io/pets/index.html",
+        "https://gustavonogales.github.io/pets/main-es2015.4a9ab31809fc089fc0df.js",
+        "https://gustavonogales.github.io/pets/main-es5.4a9ab31809fc089fc0df.js",
+        "https://gustavonogales.github.io/pets/manifest.webmanifest",
+        "https://gustavonogales.github.io/pets/polyfills-es2015.df2c9de9413c0a072d30.js",
+        "https://gustavonogales.github.io/pets/polyfills-es5.3582896f3d09912c35c7.js",
+        "https://gustavonogales.github.io/pets/runtime-es2015.16670f032485b4a9a5c5.js",
+        "https://gustavonogales.github.io/pets/runtime-es5.16670f032485b4a9a5c5.js",
+        "https://gustavonogales.github.io/pets/styles.53379f83c51da460839c.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://gustavonogales.github.io/pets/PoIcon.674feb58fe35bad6290a.eot",
+        "https://gustavonogales.github.io/pets/PoIcon.c9777c238abcda46f0f0.svg",
+        "https://gustavonogales.github.io/pets/PoIcon.cfc4ccd37bc7fe516405.ttf",
+        "https://gustavonogales.github.io/pets/PoIcon.ffaadd0f052f01a3bd66.woff",
+        "https://gustavonogales.github.io/pets/Roboto-Bold.6dafca5a4f1e31f2bdf1.ttf",
+        "https://gustavonogales.github.io/pets/Roboto-Light.73fd17b88d34c2b2f437.ttf",
+        "https://gustavonogales.github.io/pets/Roboto-Regular.1ba679c05036b34bf359.ttf",
+        "https://gustavonogales.github.io/pets/assets/icons/icon-128x128.png",
+        "https://gustavonogales.github.io/pets/assets/icons/icon-144x144.png",
+        "https://gustavonogales.github.io/pets/assets/icons/icon-152x152.png",
+        "https://gustavonogales.github.io/pets/assets/icons/icon-192x192.png",
+        "https://gustavonogales.github.io/pets/assets/icons/icon-384x384.png",
+        "https://gustavonogales.github.io/pets/assets/icons/icon-512x512.png",
+        "https://gustavonogales.github.io/pets/assets/icons/icon-72x72.png",
+        "https://gustavonogales.github.io/pets/assets/icons/icon-96x96.png",
+        "https://gustavonogales.github.io/pets/order-ascending.091d3b6d3083cb84793b.svg",
+        "https://gustavonogales.github.io/pets/order-descending.f60e7f2ec6983b34bd67.svg",
+        "https://gustavonogales.github.io/pets/order-unselected.ec2002dad008181c28cc.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://gustavonogales.github.io/pets/6-es2015.5bb993d2205ff63fac93.js": "9486f57c8af05b5f76cdfdeb954eaca1dab6b48b",
+    "https://gustavonogales.github.io/pets/6-es5.5bb993d2205ff63fac93.js": "ee6341479e0a5f8cafc876461d75aed38d3a9f7c",
+    "https://gustavonogales.github.io/pets/7-es2015.c1f56092d116aa29b302.js": "36b39c1646b28ed612b17ca77c2bd85cb3e7fc18",
+    "https://gustavonogales.github.io/pets/7-es5.c1f56092d116aa29b302.js": "cb449e265ed1ed030ff8e3a09ca616b998fa45e1",
+    "https://gustavonogales.github.io/pets/PoIcon.674feb58fe35bad6290a.eot": "5a755b12dd9e8c988b19305cc91e643dbc5f9c32",
+    "https://gustavonogales.github.io/pets/PoIcon.c9777c238abcda46f0f0.svg": "c4bb3356d32ff4ac498a58b28df6e87f18ec86ec",
+    "https://gustavonogales.github.io/pets/PoIcon.cfc4ccd37bc7fe516405.ttf": "679ef149248e91992e11278b9e47914d7a8d02c5",
+    "https://gustavonogales.github.io/pets/PoIcon.ffaadd0f052f01a3bd66.woff": "91775e0eddab399b1652e4485003e6461c0efdac",
+    "https://gustavonogales.github.io/pets/Roboto-Bold.6dafca5a4f1e31f2bdf1.ttf": "cc6475f739a24f3a0a4da47addd854d097fead7e",
+    "https://gustavonogales.github.io/pets/Roboto-Light.73fd17b88d34c2b2f437.ttf": "3d12868aa590c19782abe544aaa6fdb9c06a398c",
+    "https://gustavonogales.github.io/pets/Roboto-Regular.1ba679c05036b34bf359.ttf": "cca06f9de4844f45a2e0af1501b64f317078b3b0",
+    "https://gustavonogales.github.io/pets/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://gustavonogales.github.io/pets/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://gustavonogales.github.io/pets/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://gustavonogales.github.io/pets/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://gustavonogales.github.io/pets/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://gustavonogales.github.io/pets/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://gustavonogales.github.io/pets/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://gustavonogales.github.io/pets/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://gustavonogales.github.io/pets/common-es2015.a1729d9d9587498e5ced.js": "de53eabb4dc03596425cd0d49f59f59ee45496b3",
+    "https://gustavonogales.github.io/pets/common-es5.a1729d9d9587498e5ced.js": "84d78b65e996c374a522a538b07e2fbe7dee7096",
+    "https://gustavonogales.github.io/pets/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "https://gustavonogales.github.io/pets/index.html": "0cf082f51d911d986b9111ed385f5cd1c1ca015b",
+    "https://gustavonogales.github.io/pets/main-es2015.4a9ab31809fc089fc0df.js": "30e44086d5d4989e6ff55aff6fdd4049c429c722",
+    "https://gustavonogales.github.io/pets/main-es5.4a9ab31809fc089fc0df.js": "4563c93144544fe6d88b87b7ca085051c3c056fd",
+    "https://gustavonogales.github.io/pets/manifest.webmanifest": "ffe8cb39950216167b5c4a984469aacbef704bd4",
+    "https://gustavonogales.github.io/pets/order-ascending.091d3b6d3083cb84793b.svg": "81f52dddb5f66ec8c573b77b9aa714b550fdd14d",
+    "https://gustavonogales.github.io/pets/order-descending.f60e7f2ec6983b34bd67.svg": "c81adfc4f91025439deca866aaf80d1321a4fca0",
+    "https://gustavonogales.github.io/pets/order-unselected.ec2002dad008181c28cc.svg": "8eefdabc55f99d3280202048e16e3f40abff4186",
+    "https://gustavonogales.github.io/pets/polyfills-es2015.df2c9de9413c0a072d30.js": "8b5492f9f1d8672c6b454e51e08903b8f82f9485",
+    "https://gustavonogales.github.io/pets/polyfills-es5.3582896f3d09912c35c7.js": "e22edeea4879137843f563250715b03c8b70559a",
+    "https://gustavonogales.github.io/pets/runtime-es2015.16670f032485b4a9a5c5.js": "1b52615b1e880eec105114772f15c05743f6fad0",
+    "https://gustavonogales.github.io/pets/runtime-es5.16670f032485b4a9a5c5.js": "7b994f51a2cf2ba7b6fb229d4d460b418e425a37",
+    "https://gustavonogales.github.io/pets/styles.53379f83c51da460839c.css": "77e660eecafa3459f04cd56e1cef19160786991c"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
