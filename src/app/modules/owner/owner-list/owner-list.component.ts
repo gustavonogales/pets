@@ -1,24 +1,24 @@
-import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnDestroy, OnInit, ViewChild } from "@angular/core";
+import { Router } from "@angular/router";
 import {
   PoModalComponent,
   PoPageAction,
   PoTableAction,
   PoTableColumn,
   PoTableComponent,
-} from '@po-ui/ng-components';
-import { Owner } from '@models/Owner.model';
-import { OwnerService } from '@services/owner.service';
-import { PoSyncService } from '@po-ui/ng-sync';
+} from "@po-ui/ng-components";
+import { Owner } from "@models/Owner.model";
+import { OwnerService } from "@services/owner.service";
+import { PoSyncService } from "@po-ui/ng-sync";
 
 @Component({
-  selector: 'app-owner-list',
-  templateUrl: './owner-list.component.html',
-  styleUrls: ['./owner-list.component.scss'],
+  selector: "app-owner-list",
+  templateUrl: "./owner-list.component.html",
+  styleUrls: ["./owner-list.component.scss"],
 })
 export class OwnerListComponent implements OnInit {
-  @ViewChild('table', { static: true }) table: PoTableComponent;
-  @ViewChild('confirmToRemove', { static: true }) modal: PoModalComponent;
+  @ViewChild("table", { static: true }) table: PoTableComponent;
+  @ViewChild("confirmToRemove", { static: true }) modal: PoModalComponent;
 
   public owners: Owner[] = [];
   public loading: boolean = true;
@@ -26,39 +26,39 @@ export class OwnerListComponent implements OnInit {
 
   public readonly actions: PoPageAction[] = [
     {
-      action: () => this.router.navigateByUrl('/owners/new'),
-      label: 'Novo Dono',
-      icon: 'po-icon-user-add',
+      action: () => this.router.navigateByUrl("/owners/new"),
+      label: "Novo Dono",
+      icon: "po-icon-user-add",
     },
   ];
   public readonly tableColumns: PoTableColumn[] = [
-    { property: 'name', label: 'Nome' },
+    { property: "name", label: "Nome" },
     {
-      property: 'email',
-      label: 'E-mail',
+      property: "email",
+      label: "E-mail",
       action: this.sendEmail.bind(this),
-      type: 'link',
+      type: "link",
     },
-    { property: 'phone', label: 'Telefone' },
-    { property: 'address', label: 'Endereço' },
+    { property: "phone", label: "Telefone" },
+    { property: "address", label: "Endereço" },
     {
-      property: 'birthday',
-      label: 'Data Nascimento String',
-      type: 'date',
+      property: "birthday",
+      label: "Data Nascimento String",
+      type: "date",
     },
     {
-      property: 'birthdayDate',
-      label: 'Data Nascimento Date',
-      type: 'date',
+      property: "birthdayDate",
+      label: "Data Nascimento Date",
+      type: "date",
     },
   ];
   public readonly tableActions: PoTableAction[] = [
-    { action: this.onViewOwner.bind(this), label: 'Visualizar' },
-    { action: this.onEditOwner.bind(this), label: 'Editar' },
+    { action: this.onViewOwner.bind(this), label: "Visualizar" },
+    { action: this.onEditOwner.bind(this), label: "Editar" },
     {
       action: this.onRemoveOwner.bind(this),
-      label: 'Remover',
-      type: 'danger',
+      label: "Remover",
+      type: "danger",
       separator: true,
     },
   ];
@@ -75,13 +75,12 @@ export class OwnerListComponent implements OnInit {
     try {
       await this.getOwners();
     } catch (err) {
-      console.log('Too soon');
+      console.log("Too soon");
     }
   }
 
   private async getOwners(): Promise<void> {
     this.owners = (await this.ownerService.getAll()).items;
-    console.log(this.owners);
     this.loading = false;
   }
 
@@ -108,12 +107,12 @@ export class OwnerListComponent implements OnInit {
         });
       },
       danger: true,
-      label: 'Remover',
+      label: "Remover",
     };
 
     this.modal.secondaryAction = {
       action: () => this.modal.close(),
-      label: 'Cancelar',
+      label: "Cancelar",
     };
 
     this.modal.open();
@@ -121,11 +120,11 @@ export class OwnerListComponent implements OnInit {
 
   private sendEmail(owner: Owner) {
     const body = `Olá ${owner.name},`;
-    const subject = 'Contato - Gestão Pets';
+    const subject = "Contato - Gestão Pets";
 
     window.open(
       `mailto:${owner.email}?subject=${subject}&body=${body}`,
-      '_self'
+      "_self"
     );
   }
 }

@@ -130,5 +130,8 @@
       }
     }
   },
-  "defaultProject": "pets"
+  "defaultProject": "pets",
+  "cli": {
+    "analytics": false
+  }
 }
