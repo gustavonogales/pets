@@ -4,7 +4,7 @@ import { OwnerRoutingModule } from "./owner-routing.module";
 import { SharedModule } from "../shared/shared.module";
 import { OwnerFormComponent } from "./owner-form/owner-form.component";
 import { OwnerViewComponent } from "./owner-view/owner-view.component";
-import { OwnerDynamicFormComponent } from "./owner-dynamic-form/owner-form.component";
+import { OwnerDynamicFormComponent } from "./owner-dynamic-form/owner-dynamic-form.component";
 
 @NgModule({
   declarations: [

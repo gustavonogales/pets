@@ -25,8 +25,8 @@ export class AppComponent {
     private notificationService: PoNotificationService,
     private httpClient: HttpClient
   ) {
-    this.poSync.destroy();
-    this.syncPrepare();
+    // this.poSync.destroy();
+    // this.syncPrepare();
 
     this.httpClient
       .get(`${environment.api}/schema`)
@@ -49,7 +49,7 @@ export class AppComponent {
   }
 
   public async syncPrepare() {
-    await this.poSync.destroy();
+    // await this.poSync.destroy();
 
     this.poSync.onSync().subscribe(() => {
       console.log(`Sincronizou - ${new Date()}`);
@@ -63,7 +63,7 @@ export class AppComponent {
         PoNetworkType._3g,
         PoNetworkType._4g,
       ],
-      period: 10,
+      period: 20,
     };
 
     // console.log("Schema dos Schemas", schemaSchema);

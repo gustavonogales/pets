@@ -30,6 +30,11 @@ export class OwnerListComponent implements OnInit {
       label: "Novo Dono",
       icon: "po-icon-user-add",
     },
+    {
+      action: () => this.router.navigateByUrl("/owners/new-dynamic"),
+      label: "Novo Dono (Dynamic)",
+      icon: "po-icon-user-add",
+    },
   ];
   public readonly tableColumns: PoTableColumn[] = [
     { property: "name", label: "Nome" },
@@ -55,6 +60,7 @@ export class OwnerListComponent implements OnInit {
   public readonly tableActions: PoTableAction[] = [
     { action: this.onViewOwner.bind(this), label: "Visualizar" },
     { action: this.onEditOwner.bind(this), label: "Editar" },
+    { action: this.onEditDynamicOwner.bind(this), label: "Editar (Dynamic)" },
     {
       action: this.onRemoveOwner.bind(this),
       label: "Remover",
@@ -87,6 +93,12 @@ export class OwnerListComponent implements OnInit {
   private onEditOwner(owner: Owner): void {
     this.router.navigateByUrl(
       `/owners/edit/${owner.id ? owner.id : owner.internalId}`
+    );
+  }
+
+  private onEditDynamicOwner(owner: Owner): void {
+    this.router.navigateByUrl(
+      `/owners/edit-dynamic/${owner.id ? owner.id : owner.internalId}`
     );
   }
 

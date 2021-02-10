@@ -9,6 +9,8 @@ import { environment } from '@env/environment';
 import { PoStorageModule } from '@po-ui/ng-storage';
 import { PoSyncModule } from '@po-ui/ng-sync';
 import { MenuComponent } from '@modules/shared/menu/menu.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MyInterceptor } from './interceptors/my-interceptor';
 
 @NgModule({
   declarations: [AppComponent, MenuComponent],
@@ -22,6 +24,13 @@ import { MenuComponent } from '@modules/shared/menu/menu.component';
     }),
     PoStorageModule.forRoot(),
     PoSyncModule,
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: MyInterceptor,
+      multi: true,
+    }
   ],
   bootstrap: [AppComponent],
 })

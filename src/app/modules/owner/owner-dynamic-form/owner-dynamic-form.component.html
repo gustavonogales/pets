@@ -1,0 +1,19 @@
+<po-page-detail>
+  <po-container p-no-border="true" p-no-shadow="true">
+    <h1 class="po-font-title">{{formTitle}}</h1>
+    
+    <po-dynamic-form
+      [p-fields]="fields"
+      [p-validate-fields]="validateFields"
+      [p-value]="owner" >
+  </po-dynamic-form>
+
+  <div class="po-row">
+    <po-button
+     p-label="Salvar"
+     (p-click)="save()"
+    ></po-button>
+  </div>
+
+  </po-container>
+</po-page-detail>

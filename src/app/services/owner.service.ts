@@ -1,18 +1,21 @@
-import { Injectable } from '@angular/core';
-import { PoSyncService } from '@po-ui/ng-sync';
-import { Owner } from '@models/Owner.model';
-import { ownerSchema } from '@schemas/owner.schema';
-import { PoResponseApi } from '@po-ui/ng-components';
-import { v4 as uuidv4 } from 'uuid';
+import { Injectable } from "@angular/core";
+import { PoSyncService } from "@po-ui/ng-sync";
+import { Owner } from "@models/Owner.model";
+import { ownerSchema } from "@schemas/owner.schema";
+import { PoDynamicFormField, PoResponseApi } from "@po-ui/ng-components";
+import { v4 as uuidv4 } from "uuid";
+import { HttpClient } from "@angular/common/http";
+import { environment } from "@env/environment";
+import { Observable } from "rxjs";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class OwnerService {
-  private readonly resource = 'owner';
+  private readonly resource = "owner";
   private readonly schema = ownerSchema.name;
 
-  constructor(private poSyncService: PoSyncService) {}
+  constructor(private poSyncService: PoSyncService, private http: HttpClient) {}
 
   // getAll(): Observable<Owner[]> {
   //   return this.httpClient.get<Owner[]>(`${environment.api}/${this.resource}`);
@@ -27,7 +30,7 @@ export class OwnerService {
     const arrayBirthday = response.items.map((owner) => {
       return {
         ...owner,
-        birthdayDate: new Date(owner.birthday + ' 00:00:00'),
+        birthdayDate: new Date(owner.birthday + " 00:00:00"),
       };
     });
 
@@ -97,5 +100,9 @@ export class OwnerService {
 
   async delete(data: Owner): Promise<void> {
     await this.poSyncService.getModel(this.schema).remove(data);
+  }
+
+  public ownerFields(): Observable<PoDynamicFormField[]> {
+    return this.http.get<any>(`${environment.api}/schema`);
   }
 }
