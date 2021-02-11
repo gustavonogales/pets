@@ -2,7 +2,8 @@ import { Injectable } from "@angular/core";
 import { Owner } from "@models/Owner.model";
 import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
-
+import jsPdf from "jspdf";
+import { PrintAction } from "../utils/Print-action";
 @Injectable({
   providedIn: "root",
 })
@@ -11,7 +12,19 @@ export class PrintService {
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
   }
 
-  public print(owner: Owner): void {
+  public printJsPdf(owner: Owner): void {
+    const pdf = new jsPdf({
+      unit: "px",
+      orientation: "portrait",
+      compress: true,
+    });
+
+    pdf.text(owner.name, 0, 50);
+    pdf.text(owner.birthday, 5, 50);
+    pdf.save();
+  }
+
+  public print(owner: Owner, printAction: string = PrintAction.OPEN): void {
     const pdfBody = {
       // pageSize: "A4",
       // watermark: {
@@ -106,6 +119,15 @@ export class PrintService {
       },
     };
 
-    pdfMake.createPdf(pdfBody).open();
+    switch (printAction) {
+      case PrintAction.DOWNLOAD:
+        pdfMake.createPdf(pdfBody).download();
+        break;
+      case PrintAction.PRINT:
+        pdfMake.createPdf(pdfBody).print();
+        break;
+      default:
+        pdfMake.createPdf(pdfBody).open();
+    }
   }
 }

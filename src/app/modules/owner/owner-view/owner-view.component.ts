@@ -4,6 +4,7 @@ import { PoModalComponent, PoNotificationService } from "@po-ui/ng-components";
 import { Owner } from "@models/Owner.model";
 import { OwnerService } from "@services/owner.service";
 import { PrintService } from "@services/print.service";
+import { PrintAction } from "src/app/utils/Print-action";
 
 @Component({
   selector: "app-owner-view",
@@ -13,7 +14,11 @@ import { PrintService } from "@services/print.service";
 export class OwnerViewComponent implements OnInit {
   public owner: Owner = new Owner();
   public modalText: string;
-  public literals = { back: "Voltar", edit: "Editar", remove: "Imprimir" };
+  public literals = {
+    back: "Abrir PDF",
+    edit: "Baixar PDF",
+    remove: "Imprimir",
+  };
   @ViewChild("confirmToRemove", { static: true }) modal: PoModalComponent;
 
   constructor(
@@ -29,8 +34,9 @@ export class OwnerViewComponent implements OnInit {
     this.owner = await this.ownerService.get(id);
   }
 
-  public back(): void {
-    this.router.navigateByUrl("/owners");
+  public openPDF(): void {
+    // this.router.navigateByUrl("/owners");
+    this.printService.print(this.owner, PrintAction.OPEN);
   }
 
   public remove(): void {
@@ -56,11 +62,13 @@ export class OwnerViewComponent implements OnInit {
     this.modal.open();
   }
 
-  public edit(): void {
-    this.router.navigateByUrl(`/owners/edit/${this.owner.id}`);
+  public downloadPDF(): void {
+    // this.router.navigateByUrl(`/owners/edit/${this.owner.id}`);
+    this.printService.print(this.owner, PrintAction.DOWNLOAD);
   }
 
-  public print(): void {
-    this.printService.print(this.owner);
+  public printPDF(): void {
+    this.printService.print(this.owner, PrintAction.PRINT);
+    // this.printService.printJsPdf(this.owner);
   }
 }
